@@ -1,0 +1,91 @@
+# ----------------------------
+# Site identity
+# ----------------------------
+title: "Article"
+tagline: "Research write-ups, paper reviews, and architecture proposals"
+description: >-
+  A home for our team's blog posts, paper reviews, and research proposals
+  on language models, world models, and AI architecture.
+
+# ----------------------------
+# URL settings
+# IMPORTANT: replace YOUR-USERNAME below with your actual GitHub username/org
+# ----------------------------
+url: "https://YOUR-USERNAME.github.io"
+baseurl: "/article"
+
+# ----------------------------
+# Theme — gem-based theme, declared in Gemfile.
+# More reliable than remote_theme for GitHub Actions builds.
+# ----------------------------
+theme: jekyll-theme-chirpy
+
+# ----------------------------
+# Author / team info
+# ----------------------------
+author: "Research Team"
+avatar: /assets/img/avatar.png
+social:
+  name: Research Team
+  links:
+    - https://github.com/YOUR-USERNAME
+
+# ----------------------------
+# Plugins required by Chirpy
+# ----------------------------
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+# ----------------------------
+# Pagination (Chirpy uses jekyll-paginate built into its own layouts)
+# ----------------------------
+paginate: 10
+paginate_path: "/page:num/"
+
+# ----------------------------
+# Publish posts even if their date is in the future relative to build time
+# ----------------------------
+future: true
+
+# ----------------------------
+# Permalinks — clean URLs without .html
+# ----------------------------
+permalink: /posts/:title/
+
+# ----------------------------
+# Defaults — applied to every post automatically
+# ----------------------------
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+
+# ----------------------------
+# Timezone
+# ----------------------------
+timezone: UTC
+
+# ----------------------------
+# Build settings
+# ----------------------------
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+exclude:
+  - README.md
+  - LICENSE
+  - "*.gemspec"
+  - "*.gem"
+  - Gemfile.lock
+  - tools
+  - docs
+  - vendor
